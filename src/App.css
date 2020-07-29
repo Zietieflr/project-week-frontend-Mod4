@@ -1,8 +1,22 @@
 .App > h1 {
-  margin-left: 2rem;
+  margin-bottom: .75rem;
   padding: .5rem;
+  padding-left: 1.5rem;
   font-size: 2rem;
   background-image: linear-gradient(to right, hsla(30, 90%, 85%, 1), 10em, hsla(30, 90%, 85%, 0) );
   color: hsl(0, 100%, 10%);
+  box-shadow: 0px 0px 5px hsl(30, 90%, 10%);
+}
+
+main > select {
+  background-color: hsla(30, 20%, 95%, .8);
+  color: hsl(0, 100%, 10%);
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
+  padding: .3rem;
+  width: 30%;
+  border: none;
   border-radius: 6px;
+   
 }
