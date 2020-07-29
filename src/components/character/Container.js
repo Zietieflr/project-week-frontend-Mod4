@@ -23,13 +23,19 @@ export default function Container(props) {
   }
 
   return (
-    <main className='character-container' >
-      <select onChange={(event) => handleSelectChange(event)}>
-        <option value='' disabled selected>Select from your characters...</option>
-        {charactersList(characters)}
-      </select>
-      {/* <Form {...props} /> */}
-      {selectCharacter.name ? <Sheet {...selectCharacter} /> : null}
-    </main>
+    <>
+      <nav>
+        <select onChange={(event) => handleSelectChange(event)}>
+            <option defaultValue='' >Select from your characters...</option>
+            {charactersList(characters)}
+        </select>
+        {selectCharacter.name ? <button>Edit</button> : null}
+        <button>✚</button>
+      </nav>
+      <section className='character-container' >
+        {/* <Form {...props} /> */}
+        {selectCharacter.name ? <Sheet {...selectCharacter} /> : null}
+      </section>
+    </>
   )
 }

@@ -3,8 +3,8 @@ import BasicInformation from './BasicInformation'
 
 export default function Sheet(props) {
   return (
-    <section className='character-sheet' >
+    <main className='character-sheet' >
       <BasicInformation {...props} />
-    </section>
+    </main>
   )
 }
