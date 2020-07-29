@@ -1,7 +1,8 @@
-import React from 'react' 
+import React, {useEffect} from 'react' 
 
 export default function BasicInformation(props) {
-  const { 
+  const {
+    id,
     name,
     player_name,
     alignment,
@@ -14,24 +15,37 @@ export default function BasicInformation(props) {
     level,
     size,
     traits,
-    form,
+    edit, 
+    editCharacter,
   } = props
 
-  console.log('Basic Info form', form)
+  const changeInput = (event, inputName, id) => {
+    return editCharacter(event.target.value, inputName, id)
+  }
+
+  const renderField = (text, inputName, id) => {
+    if (edit) {
+      return <input name={inputName} value={text} onChange={(event) => changeInput(event, inputName, id)} />
+    }
+    else {
+      return <p>{text}</p>
+    }
+  }
+  
   return (
     <section className='basic-information' >
-      <div>Character Name:<br/><p>{name}</p></div>
-      <div>Class:<br/><p>{character_class}</p></div>
-      <div>Player Name:<br/><p>{player_name}</p></div>
-      <div>Ancestry and Heritage:<br/><p>{ancestry_and_heritage}</p></div>
-      <div>Background:<br/><p>{background}</p></div>
-      <div>Experience Points:<br/><p>{experience_points}</p></div>
-      <div>Size:<br/><p>{size}</p></div>
-      <div>Alignment:<br/><p>{alignment}</p></div>
-      <div>Traits:<br/><p>{traits}</p></div>
-      <div>Deity(s):<br/><p>{deity}</p></div>
-      <div className='character-level'>Level:<br/><p>{level}</p></div>
-      <div className='character-hero-points'>Hero Points:<br/><p>{hero_points}</p></div>
+      <div>Character Name:<br/>{renderField(name,'name', id)}</div>
+      <div>Class:<br/>{renderField(character_class, 'character_class', id)}</div>
+      <div>Player Name:<br/>{renderField(player_name, 'player_name', id)}</div>
+      <div>Ancestry and Heritage:<br/>{renderField(ancestry_and_heritage, 'ancestry_and_heritage', id)}</div>
+      <div>Background:<br/>{renderField(background, 'background', id)}</div>
+      <div>Experience Points:<br/>{renderField(experience_points, 'experience_points', id)}</div>
+      <div>Size:<br/>{renderField(size, 'size', id)}</div>
+      <div>Alignment:<br/>{renderField(alignment, 'alignment', id)}</div>
+      <div>Traits:<br/>{renderField(traits, 'traits', id)}</div>
+      <div>Deity(s):<br/>{renderField(deity, 'deity', id)}</div>
+      <div className='character-level'>Level:<br/>{renderField(level, 'level', id)}</div>
+      <div className='character-hero-points'>Hero Points:<br/>{renderField(hero_points, 'hero_points', id)}</div>
     </section>
   )
 }

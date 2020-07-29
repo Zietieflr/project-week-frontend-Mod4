@@ -51,7 +51,7 @@
 }
 
 .basic-information {
-  color: hsl(30, 90%, 10%);
+  color: hsl(0, 100%, 10%);
   background-color: hsla(30, 60%, 95%, .8);
   width: auto;
   display: grid;
@@ -76,4 +76,16 @@
   border: 1px solid hsl(30, 90%, 10%);
   border-radius: 4px;
   line-height: 1.1em;
+}
+
+.basic-information > div > input {
+  font-size: 1rem;
+  color: hsl(0, 50%, 40%);
+  font-family: inherit;
+  background-color: hsla(30, 20%, 95%, 1);
+  padding: .4rem;
+  border: 1px solid hsl(0, 50%, 40%);
+  border-radius: 4px;
+  line-height: 1.1em;
+  width: 90%;
 }

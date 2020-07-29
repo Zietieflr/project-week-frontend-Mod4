@@ -8,7 +8,16 @@ export function useCharacters() {
     fetchGET(url('characters'))
       .then(results => setCharacters(results))
   }, [])
+
+  const editCharacter = (newValue, key, id) => {
+    const editedCharacters = characters.map(character => {
+      if (character.id === id) {
+        return {...character, [key]: newValue }
+      }
+    })
+    setCharacters([...editedCharacters])
+    return newValue
+  }
   
-  
-  return [characters, setCharacters]
+  return [characters, setCharacters, editCharacter]
 }
