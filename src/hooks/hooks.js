@@ -14,6 +14,9 @@ export function useCharacters() {
       if (character.id === id) {
         return {...character, [key]: newValue }
       }
+      else {
+        return character
+      }
     })
     setCharacters([...editedCharacters])
     return newValue

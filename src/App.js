@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>P2e Character Sheet</h1>
-      <CharacterContainer characters={characters} editCharacter={editCharacter} /> 
+      <CharacterContainer characters={characters} setCharacters={setCharacters} editCharacter={editCharacter} /> 
     </div>
   );
 }
