@@ -47,11 +47,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## My Info
 
 If you'd like to see more about me I can be found at:
-[LinkedIn](https://www.linkedin.com/in/logan-mcguire/)
-[GitHub](https://github.com/Zietieflr)
+
+-[LinkedIn](https://www.linkedin.com/in/logan-mcguire/)
+-[GitHub](https://github.com/Zietieflr)
 
 ### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 For more about Ruby on Rails check out [Ruby on Rails API](https://api.rubyonrails.org/).
