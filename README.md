@@ -48,8 +48,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 If you'd like to see more about me I can be found at:
 
--[LinkedIn](https://www.linkedin.com/in/logan-mcguire/)
--[GitHub](https://github.com/Zietieflr)
+- [LinkedIn](https://www.linkedin.com/in/logan-mcguire/)
+- [GitHub](https://github.com/Zietieflr)
 
 ### Learn More
 
