@@ -29,12 +29,12 @@ This will initiate the installation of the React app on your machine.
 
 ## Running the Application
 
-Once both the Frontend and [Backend](https://us04web.zoom.us/j/79071125630?pwd=YUtQUWVkQzcxU2pVVy9oekRab3VlZz09) are installed, the application can be launched. 
-In your [Backend](https://us04web.zoom.us/j/79071125630?pwd=YUtQUWVkQzcxU2pVVy9oekRab3VlZz09) command line directory, run:
+Once both the Frontend and [Backend](https://github.com/Zietieflr/project-week-backend-Mod4) are installed, the application can be launched. 
+In your [Backend](https://github.com/Zietieflr/project-week-backend-Mod4) command line directory, run:
 ```
 rails s
 ```
-This will open a server on port 3000, which this application is designed to run on. If you must have this run on a different port then see [Backend](https://us04web.zoom.us/j/79071125630?pwd=YUtQUWVkQzcxU2pVVy9oekRab3VlZz09) for the appropriate rails command. Additionally, inside your local frontend folder you'll need to go to ./src/helpers/urls.js and edit line 2 to the appropriate port number. 
+This will open a server on port 3000, which this application is designed to run on. If you must have this run on a different port then see [Backend](https://github.com/Zietieflr/project-week-backend-Mod4) for the appropriate rails command. Additionally, inside your local frontend folder you'll need to go to ./src/helpers/urls.js and edit line 2 to the appropriate port number. 
 
 Then run: 
 ```
