@@ -6,13 +6,23 @@ export function useCharacters() {
   const [ characters, setCharacters ] = useState({})
   useEffect(() => {
     fetchGET(url('characters'))
-      .then(results => setCharacters(results))
+      .then(results => charactersToState(results))
   }, [])
 
-  const editCharacter = (newValue, key, id) => {
+  const charactersToState = (backendCharacters) => {
+    const editedCharacters = backendCharacters.map(character => {
+      const { ability_score } = character
+      const ability_score_attributes = ability_score
+      delete character.ability_score
+      return {...character, ability_score_attributes}
+    })
+    return setCharacters(editedCharacters)
+  }
+
+  const editCharacter = (newValue, id) => {
     const editedCharacters = characters.map(character => {
       if (character.id === id) {
-        return {...character, [key]: newValue }
+        return {...character, ...newValue}
       }
       else {
         return character

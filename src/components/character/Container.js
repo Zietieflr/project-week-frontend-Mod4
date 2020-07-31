@@ -53,7 +53,10 @@ export default function Container(props) {
   const updateCharacterID = (newChar, oldChar) => {
     const editedCharacters = characters.map(character => {
       if (character.id === oldChar.id && character.name === oldChar.name) {
-        return {...character, id: newChar.id }
+        const { ability_score } = newChar
+        const ability_score_attributes = ability_score
+        delete newChar.ability_score
+        return {...newChar, ability_score_attributes}
       }
       else {
         return character
