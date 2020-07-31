@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react' 
+import React from 'react' 
 import AbilityScores from './AbilityScores'
+import BasicInformationField from './BasicInformationFields'
 
 export default function BasicInformation(props) {
   const {
@@ -38,18 +39,90 @@ export default function BasicInformation(props) {
   return (
     <>
       <section className='basic-information' >
-        <div>Character Name:<br/>{renderField(name,'name', id)}</div>
-        <div>Class:<br/>{renderField(character_class, 'character_class', id)}</div>
-        <div>Player Name:<br/>{renderField(player_name, 'player_name', id)}</div>
-        <div>Ancestry and Heritage:<br/>{renderField(ancestry_and_heritage, 'ancestry_and_heritage', id)}</div>
-        <div>Background:<br/>{renderField(background, 'background', id)}</div>
-        <div>Experience Points:<br/>{renderField(experience_points, 'experience_points', id)}</div>
-        <div>Size:<br/>{renderField(size, 'size', id)}</div>
-        <div>Alignment:<br/>{renderField(alignment, 'alignment', id)}</div>
-        <div>Traits:<br/>{renderField(traits, 'traits', id)}</div>
-        <div>Deity(s):<br/>{renderField(deity, 'deity', id)}</div>
-        <div className='character-level'>Level:<br/>{renderField(level, 'level', id)}</div>
-        <div className='character-hero-points'>Hero Points:<br/>{renderField(hero_points, 'hero_points', id)}</div>
+        <BasicInformationField 
+          label={'Character Name:'} 
+          text={name} 
+          keyString={'name'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Class:'} 
+          text={character_class} 
+          keyString={'character_class'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Player Name:'} 
+          text={player_name} 
+          keyString={'player_name'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Ancestry and Heritage:'} 
+          text={ancestry_and_heritage} 
+          keyString={'ancestry_and_heritage'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Background:'} 
+          text={background} 
+          keyString={'background'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Experience Points:'} 
+          text={experience_points} 
+          keyString={'experience_points'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Size:'} 
+          text={size} 
+          keyString={'size'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Alignment:'} 
+          text={alignment} 
+          keyString={'alignment'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Traits:'} 
+          text={traits} 
+          keyString={'traits'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Deity(s):'} 
+          text={deity} 
+          keyString={'deity'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Level:'} 
+          text={level} 
+          keyString={'level'} 
+          id={id} 
+          renderField={renderField} 
+        />
+        <BasicInformationField 
+          label={'Hero Points:'} 
+          text={hero_points} 
+          keyString={'hero_points'} 
+          id={id} 
+          renderField={renderField} 
+        />
       </section>
       {ability_score_attributes ? <AbilityScores editCharacter={editCharacter} abilityScores={ability_score_attributes} characterID={id} edit={edit} /> : null}
     </>
