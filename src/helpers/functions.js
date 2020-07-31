@@ -5,7 +5,7 @@ export function fetchGET(url) {
 
 export function fetchDELETE(url, id) {
   fetch(url + id, {
-    method: 'DELETE'
+    method: 'DELETE',
   })
 }
 
