@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useCharacters } from './hooks/hooks'
 import CharacterContainer from './components/character/Container'
 import './App.css';

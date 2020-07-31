@@ -37,11 +37,17 @@ export default function Container(props) {
     newText()
   }
 
-  const findCharacter= () => selectCharacter >= 0 ? characters.find(character => character.id === selectCharacter) : null
+  const findCharacter= () => selectCharacter >= 0 
+    ? characters.find(character => character.id === selectCharacter) 
+    : null
 
   const updateCharacter = () => {
     setEdit(!edit)
-    return fetchWithBody(url('characters')+selectCharacter, 'PATCH', {character: findCharacter()})
+    return fetchWithBody(
+      url('characters')+selectCharacter, 
+      'PATCH', 
+      {character: findCharacter()}
+    )
   }
 
   const handleEdit = () => edit ? updateCharacter() : setEdit(!edit)
@@ -79,7 +85,6 @@ export default function Container(props) {
     }
     else {
       setCharacters([...characters, blankBasicInfo()])
-      setEdit(!edit)
       setNewCharacter(!newCharacter)
       setSelectCharacter(0)
     }
@@ -89,6 +94,8 @@ export default function Container(props) {
     const oneLessCharacter = characters.filter(character => character.id !== selectCharacter)
     if (selectCharacter > 0) {fetchDELETE(url('characters'), selectCharacter)}
     setSelectCharacter(-1)
+    setEdit(false)
+    setNewCharacter(false)
     return setCharacters(oneLessCharacter)
   }
 

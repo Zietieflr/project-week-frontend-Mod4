@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { fetchGET } from '../helpers/functions'
 import url from '../helpers/urls'
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import AbilityScore from './AbitlityScore'
 
 export default function AbilityScores(props) {
   const { str, dex, con, int, wis, cha } = props.abilityScores
@@ -28,30 +29,54 @@ export default function AbilityScores(props) {
     <section className='ability-scores' >
       <h1>Ability Scores</h1>
       <div className='display-ability-scores'>
-        <div className='score-container'>
-          <div className='modifier'>{displayTotal(modifier(str))}<p>STR<br/><span>Modifier</span></p></div>
-          <div className='ability-score'><p>STRENGTH<br/><span>Score</span></p>{displayScore(str, 'str')}</div>
-        </div>
-        <div className='score-container'>
-          <div className='modifier'>{displayTotal(modifier(dex))}<p>DEX<br/><span>Modifier</span></p></div>
-          <div className='ability-score'><p>DEXTERITY<br/><span>Score</span></p>{displayScore(dex, 'dex')}</div>
-        </div>
-        <div className='score-container'>
-          <div className='modifier'>{displayTotal(modifier(con))}<p>CON<br/><span>Modifier</span></p></div>
-          <div className='ability-score'><p>CONSTITUTION<br/><span>Score</span></p>{displayScore(con, 'con')}</div>
-        </div>
-        <div className='score-container'>
-          <div className='modifier'>{displayTotal(modifier(int))}<p>INT<br/><span>Modifier</span></p></div>
-          <div className='ability-score'><p>INTELLIGENCE<br/><span>Score</span></p>{displayScore(int, 'int')}</div>
-        </div>
-        <div className='score-container'>
-          <div className='modifier'>{displayTotal(modifier(wis))}<p>WIS<br/><span>Modifier</span></p></div>
-          <div className='ability-score'><p>WISDOM<br/><span>Score</span></p>{displayScore(wis, 'wis')}</div>
-        </div>
-        <div className='score-container'>
-          <div className='modifier'>{displayTotal(modifier(cha))}<p>CHA<br/><span>Modifier</span></p></div>
-          <div className='ability-score'><p>CHARISMA<br/><span>Score</span></p>{displayScore(cha, 'cha')}</div>
-        </div>
+        <AbilityScore 
+          shortText={'STR'} 
+          longText={'STRENGTH'} 
+          score={str} 
+          displayTotal={displayTotal}
+          displayScore={displayScore}
+          modifier={modifier}
+        />
+        <AbilityScore 
+          shortText={'DEX'} 
+          longText={'DEXTERITY'} 
+          score={dex} 
+          displayTotal={displayTotal}
+          displayScore={displayScore}
+          modifier={modifier}
+        />
+        <AbilityScore 
+          shortText={'CON'} 
+          longText={'CONSTITUTION'} 
+          score={con} 
+          displayTotal={displayTotal}
+          displayScore={displayScore}
+          modifier={modifier}
+        />
+        <AbilityScore 
+          shortText={'INT'} 
+          longText={'INTELLIGENCE'} 
+          score={int} 
+          displayTotal={displayTotal}
+          displayScore={displayScore}
+          modifier={modifier}
+        />
+        <AbilityScore 
+          shortText={'WIS'} 
+          longText={'WISDOM'} 
+          score={wis} 
+          displayTotal={displayTotal}
+          displayScore={displayScore}
+          modifier={modifier}
+        />
+        <AbilityScore 
+          shortText={'CHA'} 
+          longText={'CHARISMA'} 
+          score={cha} 
+          displayTotal={displayTotal}
+          displayScore={displayScore}
+          modifier={modifier}
+        />
       </div>
     </section>
   )

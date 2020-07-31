@@ -117,6 +117,13 @@
   border-radius: 6px;
 }
 
+.display-ability-scores :nth-child(1) { order: 1; }
+.display-ability-scores :nth-child(2) { order: 3; }
+.display-ability-scores :nth-child(3) { order: 5; }
+.display-ability-scores :nth-child(4) { order: 2; }
+.display-ability-scores :nth-child(5) { order: 4; }
+.display-ability-scores :nth-child(6) { order: 6; }
+
 .score-container {
   display: flex;
   justify-content: space-between;
@@ -174,7 +181,7 @@ input.display-total {
   color: hsl(0, 50%, 40%);
   font-family: inherit;
   background-color: hsla(30, 20%, 95%, 1);
-  padding: .4rem;
+  padding: .25rem;
   border: 1px solid hsl(0, 50%, 40%);
   border-radius: 4px;
   line-height: 1.1em;
