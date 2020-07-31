@@ -1,6 +1,6 @@
-#Digital Character Sheet for P2e
+# Digital Character Sheet for P2e
 
-##Introduction
+## Introduction
 
 This page is designed to implement a digital character sheet for Pathfinder Second Edition. To run this app you will need two repos, the Frontend(this one) and the [Backend](https://github.com/Zietieflr/project-week-backend-Mod4). This README will focus on Frontend installation and overall goals, while the Backend will exclusively cover its installation. 
 
@@ -8,16 +8,18 @@ At the time of writing this, I am wrapping up the twelfth week of my Flatiron Sc
 
 Inside of React, I specifically chose to use Hooks for my state. This allowed me to track different elements of my page more easily as well as create custom Hooks to simplify some of my requirements. 
 
-##Demonstration Video
+## Demonstration Video
+
 [App in use.](https://youtu.be/wsU3MPdfwTo)
 
-##Technologies Used
+## Technologies Used
+
 To be able to run this project you'll need:
 -yarn and/or npm
 -React
 -Ruby on Rails
 
-##Installation
+## Installation
 
 After cloning down this repo, open the local folder in your command line and run: 
 ```
@@ -25,7 +27,8 @@ yarn install
 ```
 This will initiate the installation of the React app on your machine. 
 
-##Running the Application
+## Running the Application
+
 Once both the Frontend and [Backend](https://us04web.zoom.us/j/79071125630?pwd=YUtQUWVkQzcxU2pVVy9oekRab3VlZz09) are installed, the application can be launched. 
 In your [Backend](https://us04web.zoom.us/j/79071125630?pwd=YUtQUWVkQzcxU2pVVy9oekRab3VlZz09) command line directory, run:
 ```
@@ -41,12 +44,13 @@ Continue to watch the terminal, as this command defaults to port 3000. As such, 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##My Info
+## My Info
+
 If you'd like to see more about me I can be found at:
 [LinkedIn](https://www.linkedin.com/in/logan-mcguire/)
 [GitHub](https://github.com/Zietieflr)
 
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 To learn React, check out the [React documentation](https://reactjs.org/).
